@@ -1,3 +1,3 @@
 Personal notes on Apache Tomcat.
 
-http://tomcat.apache.org/
+https://tomcat.apache.org/
