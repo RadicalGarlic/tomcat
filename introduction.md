@@ -1,15 +1,15 @@
 # Introduction
-https://tomcat.apache.org/
-
 Apache Tomcat is an open source web application server.
 
 It implements Jakarta Servlet, Jakarta Server Pages, Jakarta Expression Language, Jakarta WebSocket, Jakarta Annotations and Jakarta Authentication specifications. These specifications are part of the Jakarta EE (enterprise edition) platform. The Jakarta EE platform is the open source continuation of the Java EE platform.
 
-The serving is done by using servlets, which are just individual Java classes that handle specifically one (sometimes more) request type that could be made to the web application. All these servlets are then combined in a "servlet container" (Apache Tomcat in this case. Once the servlet container is running with all the servlets, the server can then handle any valid request (assuming there's a servlet for it). It's the application developer's job to write whatever servlets are needed.
+The Java EE platform was originally included in the standard JDK, but was split off into its own download named "J2EE" when Java 2 was released. Eventually, it was given away to the Eclipse foundation which had to rename it to Jakarta EE for legal reasons. Knowing the history of stuff like this makes me feel more secure for some reason.
 
-Servlets in Java need to implement the `javax.servlet.Servlet` interface.
+The serving is done by using servlets, which are just individual Java classes that handle specifically one or more request types that could be made to the web application. All these servlets are then combined in a "servlet container" (Apache Tomcat in this case). Once the servlet container is running with all the servlets, the server can then handle any valid request (assuming there's a servlet for it). It's the application developer's job to write whatever servlets are needed.
 
-Another important thing to know is that "context" usually refers to the webapp itself.
+The Java interface `javax.servlet.Servlet` defines what a servlet needs to be able to do.
+
+Sometimes the webapp itself is referred to as the "context".
 
 Tomcat is typically installed as a daemon/service of a system.
 
@@ -37,4 +37,4 @@ Within the `CATALINA_BASE` directory, the following directories are expected. If
 |`temp`|Temporary JVM files|
 |`conf`|Should be copied from HOME to BASE. Will NOT fall back to HOME if missing. Must contain both `server.xml` and `web.xml` at minimum.|
 
-More detailed information can be found in the `RUNNING.txt` file that should be included in every Tomcat installation. A copy is also included in these notes.
+More detailed information can be found in the `RUNNING.txt` file that should be included in every Tomcat installation. A copy of it can be found on the Tomcat website [here](https://tomcat.apache.org/tomcat-9.0-doc/RUNNING.txt). Just in case that link ever dies, a copy is also [linked here](official-documentation/RUNNING.txt).
