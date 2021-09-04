@@ -1,19 +1,13 @@
 # Introduction
 Apache Tomcat is an open source web application server.
 
-It implements Jakarta Servlet, Jakarta Server Pages, Jakarta Expression Language, Jakarta WebSocket, Jakarta Annotations and Jakarta Authentication specifications. These specifications are part of the Jakarta EE (enterprise edition) platform. The Jakarta EE platform is the open source continuation of the Java EE platform.
-
-The Java EE platform was originally included in the standard JDK, but was split off into its own download named "J2EE" when Java 2 was released. Eventually, it was given away to the Eclipse foundation which had to rename it to Jakarta EE for legal reasons. Knowing the history of stuff like this makes me feel more secure for some reason.
-
-The serving is done by using servlets, which are just individual Java classes that handle specifically one or more request types that could be made to the web application. All these servlets are then combined in a "servlet container" (Apache Tomcat in this case). Once the servlet container is running with all the servlets, the server can then handle any valid request (assuming there's a servlet for it). It's the application developer's job to write whatever servlets are needed.
-
-The Java interface `javax.servlet.Servlet` defines what a servlet needs to be able to do.
+It implements Jakarta Servlet, Jakarta Server Pages, Jakarta Expression Language, Jakarta WebSocket, Jakarta Annotations and Jakarta Authentication specifications. These specifications are part of the Jakarta EE (enterprise edition) platform.
 
 Sometimes the webapp itself is referred to as the "context".
 
-Tomcat is typically installed as a daemon/service of a system.
+Tomcat is typically installed as a daemon/service of a system, although it can also be run as a standalone process.
 
-## Directory layout
+## Directory Layout
 The two environment variables `CATALINA_HOME` and `CATALINA_BASE` are used to specify the install/configuration directories of Tomcat.
 
 `CATALINE_HOME` should point to the directory where Tomcat is installed.
